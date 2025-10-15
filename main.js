@@ -5,7 +5,7 @@ const user_distance = document.getElementById("distance");
 const buttonEl = document.querySelector("button");
 
 
-
+// Al click di "INVIA" salvo i dati di input e stampo il risultato di checkPrice con i dati 
 buttonEl.addEventListener("click", () => {
     const ageValue = user_age.value;
     const distanceValue = user_distance.value;
@@ -13,7 +13,7 @@ buttonEl.addEventListener("click", () => {
 })
 
 
-
+// Verifico l'età e applico uno sconto in base a essa
 function checkPrice(age, distance) {
     let ticket_price;
     
