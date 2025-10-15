@@ -6,12 +6,10 @@ const buttonEl = document.querySelector("button");
 
 
 // Al click di "INVIA" salvo i dati di input e stampo il risultato di checkPrice con i dati 
-buttonEl.addEventListener("submit", () => {
-    event.preventDefault();
+buttonEl.addEventListener("click", () => {
     const ageValue = user_age.value;
     const distanceValue = user_distance.value;
     console.log(checkPrice(ageValue, distanceValue));
-    console.log(ageValue);
 })
 
 
@@ -29,6 +27,6 @@ function checkPrice(age, distance) {
     else {
         ticket_price = ticket_default * distance;
     }
-
+    
     return ticket_price.toFixed(2)
 }
