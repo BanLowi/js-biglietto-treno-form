@@ -3,13 +3,22 @@ const ticket_default = 0.21;
 const user_age = document.getElementById("age");
 const user_distance = document.getElementById("distance");
 const buttonEl = document.querySelector("button");
+const formEl = document.querySelector("form");
+
+
 
 
 // Al click di "INVIA" salvo i dati di input e stampo il risultato di checkPrice con i dati 
-buttonEl.addEventListener("click", () => {
+formEl.addEventListener("click", () => {
+
     const ageValue = user_age.value;
     const distanceValue = user_distance.value;
-    console.log(checkPrice(ageValue, distanceValue));
+    const result = checkPrice(ageValue, distanceValue);
+
+    const resultDisplay = document.createElement("p");
+    formEl.append(resultDisplay);
+    
+    resultDisplay.textContent = `Prezzo del biglietto: ${result}`
 })
 
 
