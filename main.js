@@ -9,7 +9,7 @@ const resultDisplay = document.createElement("p");
 formEl.append(resultDisplay);
 
 
-// Al click di "INVIA" salvo i dati di input e stampo il risultato di checkPrice con i dati 
+// Al click di "INVIA" salvo i dati di input e stampo il risultato di checkPrice con i dati
 formEl.addEventListener("submit", (event) => {
     event.preventDefault();
 

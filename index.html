@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Train Ticket Form</title>
+
+    <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
 <body>
-    <form>
-    <select id="age">
-        <option value="Maggiorenne">Maggiorenne</option>
-        <option value="Minorenne">Minorenne</option>
-        <option value="Anziano">Anziano</option>
-    </select>
-    <input type="text" id="distance" placeholder="Inserisci distanza">
-    <button type="submit">INVIA</button>
-    </form>
+    <div class="container">
+
+        <div class="row">
+
+            <div class="card col-3 text-center border-0">
+
+                <form>
+                <select id="age">
+                    <option value="Maggiorenne">Maggiorenne</option>
+                    <option value="Minorenne">Minorenne</option>
+                    <option value="Anziano">Anziano</option>
+                </select>
+                <input type="text" id="distance" placeholder="Inserisci distanza">
+                <button class="btn btn-primary" type="submit">INVIA</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
     <script src="./main.js"></script>
 </body>
 </html>
