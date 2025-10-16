@@ -12,18 +12,21 @@
 <body>
     <div class="container">
 
-        <div class="row">
+        <div class="row justify-content-center">
 
-            <div class="card col-3 text-center border-0">
-
+            <div class="card col-3 text-center p-2">
+                
+                <div class="card-header bg-transparent mb-2">
+                    <h4>Compra un biglietto!</h4>
+                </div>
                 <form>
-                <select id="age">
+                <select id="age" class="form-select mb-2">
                     <option value="Maggiorenne">Maggiorenne</option>
                     <option value="Minorenne">Minorenne</option>
                     <option value="Anziano">Anziano</option>
                 </select>
-                <input type="text" id="distance" placeholder="Inserisci distanza">
-                <button class="btn btn-primary" type="submit">INVIA</button>
+                <input type="text" id="distance" placeholder="Inserisci distanza" class="form-control mb-2">
+                <button class="btn btn-sm btn-primary" type="submit">INVIA</button>
                 </form>
             </div>
 
