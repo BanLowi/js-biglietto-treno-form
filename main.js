@@ -4,26 +4,11 @@ const user_age = document.getElementById("age");
 const user_distance = document.getElementById("distance");
 const buttonEl = document.querySelector("button");
 const formEl = document.querySelector("form");
-const rowEl = document.querySelector("row");
+const rowEl = document.querySelector(".row");
 
-const resultDisplay = document.createElement(`
-                <div class="card col-3 text-center">
-                
-                <div class="card-header bg-transparent mb-2">
-                    <h4>Compra un biglietto!</h4>
-                </div>
-                <form>
-                <select id="age" class="form-select mb-2">
-                    <option value="Maggiorenne">Maggiorenne</option>
-                    <option value="Minorenne">Minorenne</option>
-                    <option value="Anziano">Anziano</option>
-                </select>
-                <input type="text" id="distance" placeholder="Inserisci distanza" class="form-control mb-2">
-                <button class="btn btn-sm btn-primary" type="submit">INVIA</button>
-                </form>
-                </div>
-            `);
-rowEl.append(resultDisplay);
+const ticketDisplay = document.createElement("div");
+ticketDisplay.className = "col-12"
+rowEl.append(ticketDisplay);
 
 
 // Al click di "INVIA" salvo i dati di input e stampo il risultato di checkPrice con i dati
@@ -34,7 +19,22 @@ formEl.addEventListener("submit", (event) => {
     const distanceValue = user_distance.value;
     const result = checkPrice(ageValue, distanceValue);
 
-    resultDisplay.textContent = `Prezzo del biglietto: ${result}`
+    ticketDisplay.innerHTML = `
+    
+            <div class="card col-3 text-center p-2">
+                
+                <div class="card-header bg-transparent mb-2">
+                    <h4>IL TUO BIGLIETTO</h4>
+                </div>
+
+                <div class="card-body bg-transparent mb-2">
+                    <h4>${result}</h4>
+                </div>
+
+            </div>
+
+    
+    `
 })
 
 
